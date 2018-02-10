@@ -365,6 +365,7 @@ public class Launcher extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         FeatureFlags.INSTANCE.loadThemePreference(this);
+        Utilities.setupPirateLocale(this);
         super.onCreate(savedInstanceState);
 
         setScreenOrientation();
@@ -1159,7 +1160,6 @@ public class Launcher extends Activity
         setupOverviewPanel();
 
         // Setup the workspace
-        mWorkspace.setHapticFeedbackEnabled(Utilities.getPrefs(this).getEnableHapticFeedback());
         mWorkspace.setOnLongClickListener(this);
         mWorkspace.setup(mDragController);
         // Until the workspace is bound, ensure that we keep the wallpaper offset locked to the
@@ -4004,6 +4004,7 @@ public class Launcher extends Activity
         if (context instanceof Launcher) {
             return (Launcher) context;
         }
+
         return LauncherAppState.getInstance().getLauncher();
     }
 
@@ -4015,6 +4016,11 @@ public class Launcher extends Activity
     }
 
     public void startEditIcon(EditableItemInfo info) {
+        if (Utilities.isBlacklistedAppInstalled(this)) {
+            Toast.makeText(this, R.string.unauthorized_device, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         mEditingItem = info;
         setWaitingForResult(new PendingRequestArgs((ItemInfo) mEditingItem));
         Intent intent = new Intent(this, EditIconActivity.class);
