@@ -69,7 +69,6 @@ interface IPreferenceProvider {
     fun lightStatusBarKeyCache(value: Boolean, commit: Boolean = false)
     val hotseatShowArrow: Boolean
     val hotseatShowPageIndicator: Boolean
-    val enableHapticFeedback: Boolean
     val keepScrollState: Boolean
     val useFullWidthSearchBar: Boolean
     val showVoiceSearchButton: Boolean
@@ -130,9 +129,12 @@ interface IPreferenceProvider {
     val iconPackPackage: String
     val hotseatIconScale: Float
     val hotseatHeightScale: Float
+    val hotseatShouldUseCustomOpacity: Boolean
+    val hotseatCustomOpacity: Float
     val enablePhysics: Boolean
     val snowflakeSizeScale: Float
     val snowflakesNum: String
+    val ayyMatey: Boolean
 
     // -----------------
     // GENERAL - BITS
