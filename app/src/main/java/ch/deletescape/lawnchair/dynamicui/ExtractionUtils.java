@@ -57,8 +57,10 @@ public class ExtractionUtils {
      * Starts the {@link ColorExtractionService} without checking the wallpaper id
      */
     public static void startColorExtractionService(Context context) {
-        if(Utilities.hasStoragePermission(context)) {
+        try {
             context.startService(new Intent(context, ColorExtractionService.class));
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
