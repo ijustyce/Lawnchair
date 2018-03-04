@@ -38,9 +38,11 @@ open class PreferenceImpl(context: Context) : IPreferenceProvider {
 
     override val hotseatIconScale by FloatPref(PreferenceFlags.KEY_PREF_HOTSEAT_ICON_SCALE, 1f)
     override val hotseatHeightScale by FloatPref(PreferenceFlags.KEY_PREF_HOTSEAT_HEIGHT_SCALE, 1f)
+    override val hotseatCustomOpacity by FloatPref(PreferenceFlags.KEY_PREF_HOTSEAT_CUSTOM_OPACITY, .5f)
     override val allAppsIconScale by FloatPref(PreferenceFlags.KEY_PREF_ALL_APPS_ICON_SCALE, 1f)
     override val allAppsIconTextScale by FloatPref(PreferenceFlags.KEY_PREF_ALL_APPS_ICON_TEXT_SCALE, 1f)
     override val allAppsIconPaddingScale by FloatPref(PreferenceFlags.KEY_PREF_ALL_APPS_ICON_PADDING_SCALE, 1f)
+    override val hotseatShouldUseCustomOpacity by BooleanPref(PreferenceFlags.KEY_HOTSEAT_SHOULD_USE_CUSTOM_OPACITY, false)
     override val useCustomAllAppsTextColor by BooleanPref(PreferenceFlags.KEY_PREF_DRAWER_CUSTOM_LABEL_COLOR, false)
     override val verticalDrawerLayout by BooleanPref(PreferenceFlags.KEY_PREF_DRAWER_VERTICAL_LAYOUT, false)
     override val iconLabelsInTwoLines by BooleanPref(PreferenceFlags.KEY_ICON_LABELS_IN_TWO_LINES, false)
@@ -217,7 +219,6 @@ open class PreferenceImpl(context: Context) : IPreferenceProvider {
         setBoolean(PreferenceFlags.KEY_HOTSEAT_SHOULD_USE_EXTRACTED_COLORS_CACHE, value, commit)
     }
 
-    override val enableHapticFeedback by BooleanPref(FeatureFlags.KEY_PREF_HAPTIC_FEEDBACK, false)
     override val keepScrollState by BooleanPref(FeatureFlags.KEY_PREF_KEEP_SCROLL_STATE, false)
     override val useFullWidthSearchBar by BooleanPref(FeatureFlags.KEY_FULL_WIDTH_SEARCHBAR, false)
     override val showVoiceSearchButton by BooleanPref(FeatureFlags.KEY_SHOW_VOICE_SEARCH_BUTTON, false)
@@ -232,8 +233,13 @@ open class PreferenceImpl(context: Context) : IPreferenceProvider {
     override val transparentHotseat by BooleanPref(FeatureFlags.KEY_PREF_TRANSPARENT_HOTSEAT, false)
     override val enableDynamicUi by BooleanPref(FeatureFlags.KEY_PREF_ENABLE_DYNAMIC_UI, false)
     override val enableBlur by BooleanPref(FeatureFlags.KEY_PREF_ENABLE_BLUR, false)
+    override fun enableBlur(enable: Boolean) {
+        sharedPrefs.edit()
+                .putBoolean(FeatureFlags.KEY_PREF_ENABLE_BLUR, enable)
+                .apply()
+    }
     override val useWhiteGoogleIcon by BooleanPref(FeatureFlags.KEY_PREF_WHITE_GOOGLE_ICON, false)
-
+    override val ayyMatey by BooleanPref(PreferenceFlags.KEY_AYY_MATEY, false)
     override fun migrateThemePref(context: Context) {
         val darkTheme = PreferenceProvider.getPreferences(context).darkTheme
         if (darkTheme) {

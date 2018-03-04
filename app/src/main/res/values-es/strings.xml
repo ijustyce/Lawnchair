@@ -28,9 +28,9 @@
   <!-- Displayed when user selects a shortcut for an app that is current not available [CHAR_LIMIT=none]-->
   <string name="activity_not_available">Aplicación no disponible</string>
   <!-- SafeMode shortcut error string -->
-  <string name="safemode_shortcut_error">Las aplicaciones descargadas se encuentran deshabilitadas en modo seguro</string>
+  <string name="safemode_shortcut_error">Las aplicaciones descargadas se encuentran desactivadas en Modo Seguro</string>
   <!-- SafeMode widget error string -->
-  <string name="safemode_widget_error">Widgets deshabilitados en modo seguro</string>
+  <string name="safemode_widget_error">Widgets desactivados en Modo Seguro</string>
   <!-- Message shown when a shortcut is not available. It could have been temporarily disabled and may start working again after some time. -->
   <string name="shortcut_not_available">Acceso directo no disponible</string>
   <!-- Widgets -->
@@ -57,23 +57,23 @@
   <!-- Error message when user has filled the hotseat -->
   <string name="hotseat_out_of_space">No hay más espacio en la bandeja de favoritos.</string>
   <!-- All applications label -->
-  <string name="all_apps_button_label">Lista de aplicaciones</string>
+  <string name="all_apps_button_label">Lista de apps</string>
   <!-- Label for button in all applications label to go back home (to the workspace / desktop)
          for accessibilty (spoken when the button gets focus). -->
   <string name="all_apps_home_button_label">Inicio</string>
   <!-- Label for remove drop target. [CHAR_LIMIT=20] -->
-  <string name="remove_drop_target_label">Eliminar</string>
+  <string name="remove_drop_target_label">Quitar</string>
   <!-- Label for uninstall drop target. [CHAR_LIMIT=20]-->
   <string name="uninstall_drop_target_label">Desinstalar</string>
   <!-- Label for app info drop target. [CHAR_LIMIT=20] -->
   <string name="app_info_drop_target_label">Información de la aplicación</string>
   <!-- Permissions: -->
   <!-- Permission short label -->
-  <string name="permlab_install_shortcut">crear accesos directos</string>
+  <string name="permlab_install_shortcut">instalar accesos directos</string>
   <!-- Permission description -->
   <string name="permdesc_install_shortcut">Permite que una aplicación añada accesos directos sin intervención del usuario.</string>
   <!-- Permission short label -->
-  <string name="permlab_read_settings">leer configuraciones de la pantalla de inicio y de accesos directos</string>
+  <string name="permlab_read_settings">leer ajustes de pantalla de inicio y accesos directos</string>
   <!-- Permission description -->
   <string name="permdesc_read_settings">Permite que la aplicación consulte los ajustes y los accesos directos de la pantalla de inicio.</string>
   <!-- Permission short label -->
@@ -121,7 +121,7 @@
   <!-- Text for settings button -->
   <string name="settings_button_text">Ajustes</string>
   <!-- Message shown when a feature is disabled by the administrator -->
-  <string name="msg_disabled_by_admin">Deshabilitada por el administrador</string>
+  <string name="msg_disabled_by_admin">Desactivada por el administrador</string>
   <!-- Text for custom accessibility action to go to the overview mode, where users can look and change the overall UI of the launcher. -->
   <string name="accessibility_action_overview">Vista general</string>
   <!-- Strings for settings -->
@@ -183,11 +183,11 @@
   <!-- Accessibility action to resize a widget. [CHAR_LIMIT=30] -->
   <string name="action_resize">Modificar tamaño</string>
   <!-- Accessibility action to increase width of a widget. [CHAR_LIMIT=30] -->
-  <string name="action_increase_width">Aumentar ancho</string>
+  <string name="action_increase_width">Aumentar anchura</string>
   <!-- Accessibility action to increase height of a widget. [CHAR_LIMIT=30] -->
   <string name="action_increase_height">Aumentar altura</string>
   <!-- Accessibility action to decrease width of a widget. [CHAR_LIMIT=30] -->
-  <string name="action_decrease_width">Reducir ancho</string>
+  <string name="action_decrease_width">Reducir anchura</string>
   <!-- Accessibility action to decrease height of a widget. [CHAR_LIMIT=30] -->
   <string name="action_decrease_height">Reducir altura</string>
   <!-- Accessibility confirmation for widget resize. -->
@@ -249,7 +249,7 @@
   <string name="about_pref_summary">Conoce acerca del equipo de Lawnchair</string>
   <string name="changelog_title">Registro de cambios de la build #%d</string>
   <string name="week_day_format">%1$s, %2$s</string>
-  <string name="icon_pack_preference_title">Paquete de iconos</string>
+  <string name="icon_pack_preference_title">Pack de Iconos</string>
   <string name="icon_pack_preference_summary">Selecciona un paquete de iconos</string>
   <string name="hotseat_uses_extracted_colors_pref_title">Utilizar el color del fondo de pantalla para el dock</string>
   <string name="hotseat_show_arrow">Mostrar flecha</string>
@@ -258,7 +258,7 @@
   <string name="hotseat_uses_extracted_colors_pref_off">El dock será gris, pero ajustado dependiendo del fondo de pantalla</string>
   <string name="transparent_hotseat_pref_title">Dock transparente</string>
   <string name="dynamic_ui_pref_title">Extrae el color de acento del fondo de pantalla</string>
-  <string name="blur_pref_title">Habilitar desenfoque</string>
+  <string name="blur_pref_title">Activar desenfoque</string>
   <string name="blur_pref_summary">Aplicar efecto de desenfoque en ciertas partes de la interfaz.\nEsto no es compatible cuando se utilizan fondos de pantalla animados</string>
   <string name="blur_radius_pref_title">Radio de desenfoque</string>
   <string name="pref_iconLabelsInTwoLines">Etiquetas de icono en dos líneas</string>
@@ -272,25 +272,27 @@
   <string name="num_hotseat_icons_pref_title">Número de iconos en el dock</string>
   <string name="icon_scale_pref_title">Tamaño de los iconos</string>
   <string name="hotseat_height_scale">Escala de altura</string>
+  <string name="hotseat_custom_opacity">Opacidad del dock</string>
+  <string name="hotseat_uses_custom_opacity">Opacidad personalizada del dock</string>
   <string name="icon_text_scale_pref_title">Tamaño del texto del icono</string>
   <string name="icon_text_padding_scale_pref_title">Escala de relleno de icono</string>
   <string name="full_width_width_widgets_pref_title">Widgets de ancho completo</string>
   <string name="full_width_widgets_pref_summary">Permitir a los widgets mostrarse sobre el ancho completo</string>
   <string name="notification_access_pref_title">Insignia en notificaciones y vista previa</string>
   <string name="notification_access_pref_summary">Deberá permitir a Lawnchair el acceso a notificaciones para poder habilitar esta función</string>
-  <string name="general_pref_title">General</string>
+  <string name="general_pref_title">Escritorio</string>
   <string name="dock_pref_title">Dock</string>
   <string name="app_drawer_pref_title">Cajón de aplicaciones</string>
-  <string name="pixel_ui_pref_title">Píxeles interfaz de usuario</string>
+  <string name="pixel_ui_pref_title">Tema</string>
   <string name="behavior_pref_title">Comportamiento</string>
   <string name="debug_pref_title">Opciones de depuración</string>
-  <string name="general_pref_summary">Pantalla de inicio, dock y cajón de aplicaciones</string>
-  <string name="dock_pref_summary">Personalizar el dock</string>
+  <string name="general_pref_summary">Personaliza tu escritorio</string>
+  <string name="dock_pref_summary">Personaliza tú dock</string>
   <string name="app_drawer_pref_summary">Personaliza tu cajón de aplicaciones</string>
-  <string name="pixel_ui_pref_summary">Habilitar características exclusivas de lanzador de Pixel</string>
+  <string name="pixel_ui_pref_summary">Tema de diferentes elementos</string>
   <string name="backup_pref_title">Copia de seguridad</string>
   <string name="behavior_pref_summary">Cambiar el comportamiento de Lawnchair</string>
-  <string name="backup_pref_summary">Copia de seguridad de su base de datos y ajustes</string>
+  <string name="backup_pref_summary">Copia de seguridad de tu base de datos y ajustes</string>
   <string name="debug_pref_summary">Reiniciar o reconstruir la base de datos de iconos</string>
   <string name="show_pixel_bar_pref_title">Mostrar la barra superior al estilo Pixel</string>
   <string name="use_wide_searchbar_pref_title">Usar barra de búsqueda ancha</string>
@@ -307,7 +309,6 @@
   <string name="light_statusbar_pref_title">Barra de estado clara</string>
   <string name="light_statusbar_pref_force">La barra de estado mostrará iconos oscuros</string>
   <string name="light_statusbar_pref_off">La barra de estado mostrará iconos claros</string>
-  <string name="haptic_feedback_pref_title">Habilitar vibración</string>
   <string name="keep_scroll_state_pref_title">Mantener posición de desplazamiento</string>
   <string name="keep_scroll_state_pref_summary">Recuerda la posición del cajón de aplicaciones</string>
   <string name="home_opens_drawer_pref_title">El botón de inicio abre el cajón de aplicaciones</string>
@@ -340,13 +341,13 @@
   <string name="pull_down_apps_search">Buscar aplicaciones</string>
   <string name="enable_screen_rotation">Habilitar la rotación de la pantalla</string>
   <!-- Import/Export Strings -->
-  <string name="backup_import_title">Importar</string>
+  <string name="backup_import_title">Restaurar</string>
   <string name="backup_export_title">Exportar</string>
   <string name="settings_export_success">Configuraciones respaldadas exitosamente</string>
-  <string name="db_export_success">Respaldo de la base de datos</string>
+  <string name="db_export_success">Base de datos respaldada exitosamente</string>
   <string name="settings_import_success">Configuraciones restauradas con éxito</string>
   <string name="db_import_success">Base de datos restaurada con éxito</string>
-  <string name="export_error">No se pudo hacer la copia</string>
+  <string name="export_error">No se pudo realizar la copia de seguridad</string>
   <string name="import_error">No se pudo restaurar</string>
   <string name="imexport_no_backup_found">No se ha encontrado una copia de seguridad</string>
   <string name="imexport_external_storage_unreadable">No se pueden leer los datos del almacenamiento externo (Concede los permisos en Ajustes)</string>
@@ -356,7 +357,7 @@
   <!-- Default units to use, either 'metric' or 'imperial' -->
   <string name="pref_cat_weather">Clima</string>
   <string name="pref_weather_title">Activar Clima</string>
-  <string name="pref_weather_units">Unidad de temperatura</string>
+  <string name="pref_weather_units">Unidad Termométrica</string>
   <string name="pref_weather_city_summary">Para obtener mejores resultados, incluye el código de país</string>
   <string name="pref_weather_city_title">Ciudad</string>
   <string name="none">Ninguno</string>
@@ -369,7 +370,7 @@
   <string name="blur_effect">Efecto de desenfoque</string>
   <string name="pref_weather_provider">Proveedor de información climática</string>
   <string name="loading">Cargando…</string>
-  <string name="icon_shape_override_label">Cambiar el aspecto de los iconos</string>
+  <string name="icon_shape_override_label">Forma de los iconos</string>
   <string name="icon_shape_system_default">No aplicar cambios</string>
   <string name="icon_shape_none">Ninguno</string>
   <string name="icon_shape_square">Cuadrado</string>
@@ -408,9 +409,21 @@
   <string name="enable_spring_pref_title">Habilitar efecto de rebote</string>
   <string name="hide_app">Ocultar aplicación</string>
   <string name="hide_app_sum">Ocultar aplicación del cajón de aplicaciones</string>
-  <string name="hide_app_selected">&#160; seleccionado</string>
-  <string name="hidden_app">Aplicaciones ocultas</string>
+  <string name="hide_app_selected">&#160;seleccionado</string>
+  <string name="hidden_app">Aplicación oculta</string>
   <string name="hide_app_apply">Aplicar</string>
-  <string name="unauthorized_device">Este dispositivo tiene algunas herramientas de piratería instaladas. Por favor, desinstálalos para continuar.</string>
+  <string name="unauthorized_device">Este dispositivo tiene algunas herramientas de piratería instaladas. Por favor, desinstálalas para continuar.</string>
   <string name="hide_app_reset">Restablecer</string>
+  <string name="two_row_dock">Barra de aplicaciones de dos filas</string>
+  <string name="reset_alternative_icons_title">¿Restablecer íconos alternativos?</string>
+  <string name="reset_alternative_icons">Tienes %1$d aplicaciones con iconos alternativos, ¿quieres restablecerlos?</string>
+  <string name="error_no_browser">No se encontró ninguna actividad para manejar las URLs</string>
+  <string name="snowfall_title">Nieve</string>
+  <string name="enable_snowfall_title">Habilitar caída de nieve en la pantalla de inicio</string>
+  <string name="enable_snowfall_summary">Puede causar problemas de rendimiento.</string>
+  <string name="snowfall_enabled">\"¡Deja que nieve, deja que nieve, deja que nieve!\"</string>
+  <string name="snowflake_size_scale">Escala de tamaño del copo de nieve</string>
+  <string name="snowflakes_num">Número máximo de copos de nieve</string>
+  <string name="lawnfeed_outdated_title">Actualización de Lawnfeed requerida</string>
+  <string name="lawnfeed_outdated">Una nueva versión de Lawnfeed es necesaria para que funcione con esta versión de Lawnchair.\n\nAntes de instalar la actualización, probablemente necesitará desinstalar la versión actual de Lawnfeed.\n\n¿Desea descargarla ahora?</string>
 </resources>
